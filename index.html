@@ -93,7 +93,7 @@
                     </p>
                 </div>
             </div>
-            <div class="sm:w-1/2 sm:h-full bg-white flex justify-center items-center w-1/2 w-full">
+            <div class="sm:w-1/2 sm:h-full bg-white flex justify-center items-center w-1/2">
                 <img class="py-14" src="img/logo-removebg.png" alt="">
             </div>
         </footer>
@@ -101,27 +101,29 @@
     </div>
     <script>
 
-            function nav() {
+   function nav() {
     if (screen.width <= 640) {
+        const mobileNav = document.getElementById("res_nav");
+        const body = document.body;
 
-    const mobileNav = document.getElementById("res_nav");
-    const body = document.body;
-
-    if (mobileNav) {
-        const currentDisplay = window.getComputedStyle(mobileNav).display;
-        mobileNav.style.display = currentDisplay === "flex" ? "none" : "flex";
-        body.style.overflowY = currentDisplay === "none" ? "hidden" : "auto";
-        navBar.style.backgroundColor = "transparent"?"white":"transparent";
-        navBar.style.color = "black";
+        if (mobileNav) {
+            const currentDisplay = window.getComputedStyle(mobileNav).display;
+            mobileNav.style.display = currentDisplay === "flex" ? "none" : "flex";
+            body.style.overflowY = currentDisplay === "none" ? "hidden" : "auto";
+            document.getElementById("res_nav").style.color = currentDisplay === "black";
+        }
     }
 }
-}
+
         window.addEventListener('scroll', function() {
             var navbar = document.getElementById('navbar');
+            const mobileNav = document.getElementById("res_nav");
+            
             if (window.scrollY > 0) {
                 navbar.classList.add('scrolled');
             } else {
                 navbar.classList.remove('scrolled');
+                mobileNav.style.color = "black";
             }
         });
 
