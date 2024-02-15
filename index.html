@@ -23,11 +23,16 @@
             color: white;
             background-color: rgb(43, 254, 43);
         }
+        .scrolled {
+        background-color: white;
+        color: black;
+        border-color: black;
+    }
     </style>
 </head>
 <body>
     <div class="h-screen relative text-white text-xl ">
-        <nav class="h-16 nav">
+        <nav id="navbar"  class="h-20 nav transition duration-500">
             <div class="flex h-full justify-between items-center pl-5">
                 <div class="text-3xl ">
                      <a href="index.html" class="flex justify-center items-center space-x-2"><img class="w-16" src="img/logo-removebg.png" alt=""><h1>VITHAI17 - FOUNDATION</h1></a>   
@@ -78,6 +83,17 @@
         </footer>
                        
     </div>
+    <script>
+        window.addEventListener('scroll', function() {
+            var navbar = document.getElementById('navbar');
+            if (window.scrollY > 0) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+    
 </body>
+
 </html>
-            
