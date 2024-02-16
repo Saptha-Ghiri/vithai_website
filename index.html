@@ -38,7 +38,7 @@
                     <div class="sm:text-3xl text-xl">
                         <a href="index.html" class="flex items-center space-x-2">
                             <img class="sm:w-16 w-12" src="img/logo-removebg.png" alt="">
-                            <h1>VITHAI17 - FOUNDATION</h1>
+                            <h1 class="" style="color: rgb(83, 50, 0);">VITHAI17 - FOUNDATION</h1>
                         </a>   
                     </div>
                     <div id="mobileNav" class="sm:hidden pr-5" onclick="nav()">
@@ -48,11 +48,11 @@
                     </div>
                 </div>
                 <div id="res_nav" class="pr-10 hidden sm:flex sm:flex-row flex-col pt-16 sm:pt-0 sm:bg-transparent bg-white sm:w-max w-full pb-96 sm:pb-0">
-                    <ul class="sm:flex-row flex flex-col sm:space-x-9 text-2xl m-3 font-mono w-full p-3 sm:space-y-0 space-y-6 justify-center text-center">
-                        <li onclick="nav()" class="hover:opacity-70 border-transparent border-b-2 hover:border-black transition duration-300 ease-in-out "><a href="">ABOUT</a></li>
-                        <li onclick="nav()" class="hover:opacity-70 border-transparent border-b-2 hover:border-black transition duration-300 ease-in-out "><a href="">PROJECTS</a></li>
-                        <li onclick="nav()" class="hover:opacity-70 border-transparent border-b-2 hover:border-black transition duration-300 ease-in-out "><a href="">OUR TEAM</a></li>
-                        <li onclick="nav()" class="hover:opacity-70 border-transparent border-b-2 hover:border-black transition duration-300 ease-in-out "><a href="">CONTACT</a></li>
+                    <ul class="sm:flex-row flex flex-col  text-2xl font-mono w-full sm:space-y-0 space-y-6 justify-center text-center">
+                        <li onclick="nav()" class="transition duration-300 p-6 ease-in-out text-red-700 hover:bg-red-700 hover:text-white"><a href="">ABOUT</a></li>
+                        <li onclick="nav()" class="transition duration-300 p-6 ease-in-out text-green-700 hover:bg-green-700 hover:text-white"><a href="">PROJECTS</a></li>
+                        <li onclick="nav()" class="transition duration-300 p-6 ease-in-out text-blue-700 hover:bg-blue-700 hover:text-white"><a href="">OUR TEAM</a></li>
+                        <li onclick="nav()" class="transition duration-300 p-6 ease-in-out text-red-700 hover:bg-red-700 hover:text-white"><a href="">CONTACT</a></li>
                     </ul>
                 </div>
             </div>
@@ -99,15 +99,9 @@
 
    function nav() {
     if (screen.width <= 640) {
-        document.getElementById("res_nav").style.color = "black";
-        // document.getElementById("navbar").style.color = "black";
-        // document.getElementById("navbar").style.backgroundColor = "white";
-
-
         document.getElementById("res_nav").style.paddingBottom = "1000px";
         const mobileNav = document.getElementById("res_nav");
         const body = document.body;
-
         if (mobileNav) {
             const currentDisplay = window.getComputedStyle(mobileNav).display;
             mobileNav.style.display = currentDisplay === "flex" ? "none" : "flex";
