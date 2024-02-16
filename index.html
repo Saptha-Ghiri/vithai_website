@@ -33,11 +33,11 @@
 <body>
     <div class="h-screen relative text-white text-xl ">
         <nav id="navbar"  class="h-20 nav transition duration-500 flex-col justify-center items-center">
-            <div class="flex sm:flex-row flex-col h-full justify-between items-center py-4 bg-white text-black">
+            <div class="flex sm:flex-row flex-col h-full justify-between items-center py-5 bg-white text-black">
                 <div class="flex justify-between items-center w-full sm:w-1/2 pl-3">
                     <div class="sm:text-3xl text-xl">
                         <a href="index.html" class="flex items-center space-x-2">
-                            <img class="sm:w-16 w-12" src="img/logo-removebg.png" alt="">
+                            <img class="sm:w-16 w-11" src="img/logo-removebg.png" alt="">
                             <h1 class="" style="color: rgb(83, 50, 0);">VITHAI17 - FOUNDATION</h1>
                         </a>   
                     </div>
@@ -47,7 +47,7 @@
                         </svg>
                     </div>
                 </div>
-                <div id="res_nav" class="sm:pr-10 hidden sm:flex sm:flex-row flex-col pt-16 sm:pt-0 sm:bg-transparent bg-white sm:w-max w-full pb-96 sm:pb-0">
+                <div id="res_nav" class="sm:pr-10 hidden sm:flex sm:flex-row flex-col pt-14 sm:pt-0 sm:bg-transparent bg-white sm:w-max w-full pb-96 sm:pb-0">
                     <ul class="sm:flex-row flex flex-col  text-2xl font-mono w-full justify-center text-center">
                         <li onclick="nav()" class="transition duration-300 p-4 sm:p-6 ease-in-out text-red-700 hover:bg-red-700 hover:text-white"><a href="">ABOUT</a></li>
                         <li onclick="nav()" class="transition duration-300 p-4 sm:p-6 ease-in-out text-green-700 hover:bg-green-700 hover:text-white"><a href="">PROJECTS</a></li>
@@ -106,7 +106,6 @@
             const currentDisplay = window.getComputedStyle(mobileNav).display;
             mobileNav.style.display = currentDisplay === "flex" ? "none" : "flex";
             body.style.overflowY = currentDisplay === "none" ? "hidden" : "auto";
-            document.getElementById("res_nav").style.color = currentDisplay === "black";
         }
     }
 }
