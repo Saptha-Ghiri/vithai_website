@@ -45,6 +45,7 @@
                         <svg id="toggleNavBtn" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 14 14">
                             <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M13.5 2H.5m13 5H.5m13 5H.5"/>
                         </svg>
+                        <div id="cross" class="hidden"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 15 15"><path fill="currentColor" fill-rule="evenodd" d="M12.854 2.854a.5.5 0 0 0-.708-.708L7.5 6.793L2.854 2.146a.5.5 0 1 0-.708.708L6.793 7.5l-4.647 4.646a.5.5 0 0 0 .708.708L7.5 8.207l4.646 4.647a.5.5 0 0 0 .708-.708L8.207 7.5z" clip-rule="evenodd"/></svg></div>
                     </div>
                 </div>
                 <div id="res_nav" class="sm:pr-10 hidden sm:flex sm:flex-row flex-col pt-14 sm:pt-0 sm:bg-transparent bg-white sm:w-max w-full pb-96 sm:pb-0">
@@ -97,18 +98,29 @@
 
 
 
-   function nav() {
-    if (screen.width <= 640) {
-        document.getElementById("res_nav").style.paddingBottom = "1000px";
-        const mobileNav = document.getElementById("res_nav");
-        const body = document.body;
-        if (mobileNav) {
-            const currentDisplay = window.getComputedStyle(mobileNav).display;
-            mobileNav.style.display = currentDisplay === "flex" ? "none" : "flex";
-            body.style.overflowY = currentDisplay === "none" ? "hidden" : "auto";
+function nav() {
+    document.getElementById("res_nav").style.paddingBottom = "1000px";
+    const mobileNav = document.getElementById("res_nav");
+    const body = document.body;
+    const toggleNavBtn = document.getElementById("toggleNavBtn");
+    const cross = document.getElementById("cross");
+    
+    if (mobileNav) {
+        const currentDisplay = window.getComputedStyle(mobileNav).display;
+        if (currentDisplay === "none") {
+            mobileNav.style.display = "flex";
+            body.style.overflowY = "hidden";
+            toggleNavBtn.style.display = "none";
+            cross.style.display = "flex";
+        } else {
+            mobileNav.style.display = "none";
+            body.style.overflowY = "auto";
+            toggleNavBtn.style.display = "flex";
+            cross.style.display = "none";
         }
     }
 }
+
     </script>
     
 </body>
