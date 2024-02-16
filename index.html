@@ -20,7 +20,7 @@
             background-color: rgb(184, 255, 184);
         }
         .b1:hover{
-            color: white;
+            color: black;
             background-color: rgb(43, 254, 43);
         }
         .scrolled {
@@ -33,13 +33,7 @@
 <body>
     <div class="h-screen relative text-white text-xl ">
         <nav id="navbar"  class="h-20 nav transition duration-500 flex-col justify-center items-center">
-            <div class="flex sm:flex-row flex-col h-full justify-between items-center py-4">
-                <!-- <div class="flex justify-between items-center w-ful">
-                    <div class="sm:text-3xl text-xl">
-                        <a href="index.html" class="flex items-center space-x-2"><img class="sm:w-16 w-12" src="img/logo-removebg.png" alt=""><h1>VITHAI17 - FOUNDATION</h1></a>   
-                    </div>
-                    <div id="mobileNav" class="sm:hidden pr-5" onclick="nav()"><svg id="toggleNavBtn" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 14 14"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M13.5 2H.5m13 5H.5m13 5H.5"/></svg></div>
-                </div> -->
+            <div class="flex sm:flex-row flex-col h-full justify-between items-center py-4 bg-white text-black">
                 <div class="flex justify-between items-center w-full sm:w-1/2 pl-3">
                     <div class="sm:text-3xl text-xl">
                         <a href="index.html" class="flex items-center space-x-2">
@@ -55,10 +49,10 @@
                 </div>
                 <div id="res_nav" class="pr-10 hidden sm:flex sm:flex-row flex-col pt-16 sm:pt-0 sm:bg-transparent bg-white sm:w-max w-full pb-96 sm:pb-0">
                     <ul class="sm:flex-row flex flex-col sm:space-x-9 text-2xl m-3 font-mono w-full p-3 sm:space-y-0 space-y-6 justify-center text-center">
-                        <li onclick="nav()" class="hover:opacity-70 border-transparent border-b-2 hover:border-white transition duration-300 ease-in-out "><a href="">ABOUT</a></li>
-                        <li onclick="nav()" class="hover:opacity-70 border-transparent border-b-2 hover:border-white transition duration-300 ease-in-out "><a href="">PROJECTS</a></li>
-                        <li onclick="nav()" class="hover:opacity-70 border-transparent border-b-2 hover:border-white transition duration-300 ease-in-out "><a href="">OUR TEAM</a></li>
-                        <li onclick="nav()" class="hover:opacity-70 border-transparent border-b-2 hover:border-white transition duration-300 ease-in-out "><a href="">CONTACT</a></li>
+                        <li onclick="nav()" class="hover:opacity-70 border-transparent border-b-2 hover:border-black transition duration-300 ease-in-out "><a href="">ABOUT</a></li>
+                        <li onclick="nav()" class="hover:opacity-70 border-transparent border-b-2 hover:border-black transition duration-300 ease-in-out "><a href="">PROJECTS</a></li>
+                        <li onclick="nav()" class="hover:opacity-70 border-transparent border-b-2 hover:border-black transition duration-300 ease-in-out "><a href="">OUR TEAM</a></li>
+                        <li onclick="nav()" class="hover:opacity-70 border-transparent border-b-2 hover:border-black transition duration-300 ease-in-out "><a href="">CONTACT</a></li>
                     </ul>
                 </div>
             </div>
@@ -122,20 +116,6 @@
         }
     }
 }
-
-        window.addEventListener('scroll', function() {
-            var navbar = document.getElementById('navbar');
-            const mobileNav = document.getElementById("res_nav");
-            
-            if (window.scrollY > 0) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-                mobileNav.style.color = "black";
-            }
-        });
-
-      
     </script>
     
 </body>
