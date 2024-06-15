@@ -35,26 +35,26 @@
 </head>
 <body>
     <div class="h-screen relative text-white text-xl ">
-        <nav id="navbar"  class="h-16 sm:h-20 nav transition duration-500 flex-col justify-center items-center">
+        <nav id="navbar" class="h-16 sm:h-20 nav transition duration-500 flex-col justify-center items-center">
             <div class="flex sm:flex-row flex-col h-full justify-between items-center py-3 bg-white text-black">
                 <div class="flex justify-between items-center w-full sm:w-1/2 pl-3">
                     <div class="sm:text-2xl text-lg">
                         <a href="index.html" class="flex items-center space-x-2">
                             <img class="sm:w-12 w-11" src="img/logo_v2_bg.png" alt="">
                             <h1 class="" style="color: rgb(83, 50, 0);">VITHAI-17 FOUNDATION</h1>
-                        </a>   
+                        </a>
                     </div>
                     <div id="mobileNav" class="sm:hidden pr-5" onclick="nav()">
                         <svg id="toggleNavBtn" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 14 14">
                             <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M13.5 2H.5m13 5H.5m13 5H.5"/>
                         </svg>
-                        <div id="cross" class="hidden"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 15 15"><path fill="currentColor" fill-rule="evenodd" d="M12.854 2.854a.5.5 0 0 0-.708-.708L7.5 6.793L2.854 2.146a.5.5 0 1 0-.708.708L6.793 7.5l-4.647 4.646a.5.5 0 0 0 .708.708L7.5 8.207l4.646 4.647a.5.5 0 0 0 .708-.708L8.207 7.5z" clip-rule="evenodd"/></svg></div>
+                        <div id="cross" class="hidden"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 15 15"><path fill="currentColor" fill-rule="evenodd" d="M12.854 2.854a.5.5 0 0 0-.708-.708L7.5 6.793 2.854 2.146a.5.5 0 1 0-.708.708L6.793 7.5l-4.647 4.646a.5.5 0 0 0 .708.708L7.5 8.207l4.646 4.647a.5.5 0 0 0 .708-.708L8.207 7.5z" clip-rule="evenodd"/></svg></div>
                     </div>
                 </div>
                 <div id="res_nav" class="sm:pr-10 hidden sm:flex sm:flex-row flex-col pt-14 sm:pt-0 sm:bg-transparent bg-white sm:w-max w-full pb-96 sm:pb-0">
-                    <ul class="sm:flex-row flex flex-col  text-2xl font-mono w-full justify-center text-center">
+                    <ul class="sm:flex-row flex flex-col text-2xl font-mono w-full justify-center text-center">
                         <li class="transition duration-300 p-4 sm:p-6 ease-in-out text-red-700 hover:bg-red-700 hover:text-white"><a href="#about">ABOUT</a></li>
-                        <li class="transition duration-300 p-4 sm:p-6 ease-in-out  text-blue-700 hover:bg-blue-700 hover:text-white"><a href="#projects">PROJECTS</a></li>
+                        <li class="transition duration-300 p-4 sm:p-6 ease-in-out text-blue-700 hover:bg-blue-700 hover:text-white"><a href="#projects">PROJECTS</a></li>
                         <li class="transition duration-300 p-4 sm:p-6 ease-in-out text-green-700 hover:bg-green-700 hover:text-white"><a href="#services">SERVICES</a></li>
                         <li class="transition duration-300 p-4 sm:p-6 ease-in-out text-purple-900 hover:bg-purple-900 hover:text-white"><a href="#gallery">GALLERY</a></li>
                         <li class="transition duration-300 p-4 sm:p-6 ease-in-out text-black hover:bg-black hover:text-white"><a href="#contact">CONTACT</a></li>
@@ -62,6 +62,8 @@
                 </div>
             </div>
         </nav>
+        
+        
         <div class="h-screen bg-black main bg-cover bg-center flex flex-col justify-center items-stretch p-4">
             <div class="text-center flex flex-col space-y-7">
                 <h1 class="text-3xl sm:text-4xl">Making a Difference in the world</h1>
@@ -204,9 +206,7 @@
     <script>
 
 
-
 function nav() {
-    document.getElementById("res_nav").style.paddingBottom = "1000px";
     const mobileNav = document.getElementById("res_nav");
     const body = document.body;
     const toggleNavBtn = document.getElementById("toggleNavBtn");
@@ -228,17 +228,20 @@ function nav() {
     }
 }
 
+// Add event listeners to each nav link to close the menu on click only on mobile screens
 document.querySelectorAll('#res_nav ul li a').forEach(anchor => {
     anchor.addEventListener('click', function () {
-        nav();
+        if (window.innerWidth <= 640) {
+            nav();
+        }
     });
 });
 
+    </script>
     
 </body>
 
 </html>
-
 
 
 
