@@ -28,6 +28,9 @@
         color: black;
         border-color: black;
     }
+    html{
+        scroll-behavior: smooth;
+    }
     </style>
 </head>
 <body>
@@ -50,10 +53,11 @@
                 </div>
                 <div id="res_nav" class="sm:pr-10 hidden sm:flex sm:flex-row flex-col pt-14 sm:pt-0 sm:bg-transparent bg-white sm:w-max w-full pb-96 sm:pb-0">
                     <ul class="sm:flex-row flex flex-col  text-2xl font-mono w-full justify-center text-center">
-                        <li class="transition duration-300 p-4 sm:p-6 ease-in-out text-red-700 hover:bg-red-700 hover:text-white"><a href="">ABOUT</a></li>
-                        <li class="transition duration-300 p-4 sm:p-6 ease-in-out text-green-700 hover:bg-green-700 hover:text-white"><a href="">PROJECTS</a></li>
-                        <li class="transition duration-300 p-4 sm:p-6 ease-in-out text-blue-700 hover:bg-blue-700 hover:text-white"><a href="">OUR TEAM</a></li>
-                        <li class="transition duration-300 p-4 sm:p-6 ease-in-out text-yellow-700 hover:bg-yellow-700 hover:text-white"><a href="">CONTACT</a></li>
+                        <li class="transition duration-300 p-4 sm:p-6 ease-in-out text-red-700 hover:bg-red-700 hover:text-white"><a href="#about">ABOUT</a></li>
+                        <li class="transition duration-300 p-4 sm:p-6 ease-in-out  text-blue-700 hover:bg-blue-700 hover:text-white"><a href="#projects">PROJECTS</a></li>
+                        <li class="transition duration-300 p-4 sm:p-6 ease-in-out text-green-700 hover:bg-green-700 hover:text-white"><a href="#services">SERVICES</a></li>
+                        <li class="transition duration-300 p-4 sm:p-6 ease-in-out text-purple-900 hover:bg-purple-900 hover:text-white"><a href="#gallery">GALLERY</a></li>
+                        <li class="transition duration-300 p-4 sm:p-6 ease-in-out text-black hover:bg-black hover:text-white"><a href="#contact">CONTACT</a></li>
                     </ul>
                 </div>
             </div>
@@ -66,7 +70,7 @@
             </div>
         </div>
 
-        <div class="text-black sm:p-20 p-5 flex  flex-col space-y-5">
+        <div id="about" class="text-black sm:p-20 p-5 flex  flex-col space-y-5">
             <h1 class="text-5xl text-green-700">About</h1>
             <div><p class="">&nbsp &nbsp &nbsp &nbsp At VITHAI-17 FOUNDATION, our vision is a world where every individual, regardless of their background, has the opportunity to thrive in a sustainable and harmonious environment. We believe in a future where the 17 Sustainable Development Goals are not just a framework but a way of life, inspiring positive change in every corner of the globe.</p></div>
             <div><p class="">&nbsp &nbsp &nbsp &nbsp Our mission is clear and resolute. We are committed to raising awareness and driving action towards the 17 Sustainable Development Goals by collaborating with communities, governments, and organizations worldwide. Through education, advocacy, and sustainable initiatives, we aim to empower individuals to become active agents of change and contribute to a brighter, more sustainable future for all.</p></div>
@@ -147,7 +151,7 @@
 
         <div class="bg-black h-0.5 mx-5"></div>
 
-        <div class="text-black sm:p-20 p-5 space-y-4">
+        <div id="projects" class="text-black sm:p-20 p-5 space-y-4">
             <h1 class="text-5xl text-green-700">Our Projects</h1>
             <div class="space-y-4 sm:space-y-0 flex sm:space-x-4 sm:flex-row flex-col h-full ">
                 <div class="bg-green-400 flex rounded-2xl items-center flex-col p-3 space-y-5 sm:w-1/3 ">
@@ -168,7 +172,7 @@
 
         </div>
 
-        <footer class="sm:h-screen flex sm:flex-row flex-col justify-center items-center relative w-full">
+        <footer id="contact" class="sm:h-screen flex sm:flex-row flex-col justify-center items-center relative w-full">
             <div class="sm:w-1/2 bg-green-600 sm:h-full p-8 sm:p-24 space-y-10 text-white w-full">
                 <div class="text-5xl">Contact Us</div>
                 <div>
