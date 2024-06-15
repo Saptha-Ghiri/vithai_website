@@ -53,11 +53,11 @@
                 </div>
                 <div id="res_nav" class="sm:pr-10 hidden sm:flex sm:flex-row flex-col pt-14 sm:pt-0 sm:bg-transparent bg-white sm:w-max w-full pb-96 sm:pb-0">
                     <ul class="sm:flex-row flex flex-col  text-2xl font-mono w-full justify-center text-center">
-                        <li class="transition duration-300 p-4 sm:p-6 ease-in-out text-red-700 hover:bg-red-700 hover:text-white" onclick="nav()"><a href="#about">ABOUT</a></li>
-                        <li class="transition duration-300 p-4 sm:p-6 ease-in-out  text-blue-700 hover:bg-blue-700 hover:text-white" onclick="nav()"><a href="#projects">PROJECTS</a></li>
-                        <li class="transition duration-300 p-4 sm:p-6 ease-in-out text-green-700 hover:bg-green-700 hover:text-white" onclick="nav()"><a href="#services">SERVICES</a></li>
-                        <li class="transition duration-300 p-4 sm:p-6 ease-in-out text-purple-900 hover:bg-purple-900 hover:text-white" onclick="nav()"><a href="#gallery">GALLERY</a></li>
-                        <li class="transition duration-300 p-4 sm:p-6 ease-in-out text-black hover:bg-black hover:text-white" onclick="nav()"><a href="#contact">CONTACT</a></li>
+                        <li class="transition duration-300 p-4 sm:p-6 ease-in-out text-red-700 hover:bg-red-700 hover:text-white"><a href="#about">ABOUT</a></li>
+                        <li class="transition duration-300 p-4 sm:p-6 ease-in-out  text-blue-700 hover:bg-blue-700 hover:text-white"><a href="#projects">PROJECTS</a></li>
+                        <li class="transition duration-300 p-4 sm:p-6 ease-in-out text-green-700 hover:bg-green-700 hover:text-white"><a href="#services">SERVICES</a></li>
+                        <li class="transition duration-300 p-4 sm:p-6 ease-in-out text-purple-900 hover:bg-purple-900 hover:text-white"><a href="#gallery">GALLERY</a></li>
+                        <li class="transition duration-300 p-4 sm:p-6 ease-in-out text-black hover:bg-black hover:text-white"><a href="#contact">CONTACT</a></li>
                     </ul>
                 </div>
             </div>
@@ -120,7 +120,7 @@
                             <img class="object-fill rounded-xl" src="img/team/tharushi-removebg-preview.png" alt="">
                         </div>
                         <div class="border border-black rounded-xl p-3 flex justify-center items-center flex-col w-full">
-                            <p>S Tharushi S S</p>
+                            <p>Tharushi S S</p>
                             <p class="font-bold">Strategic Advisor</p>
                         </div>
                     </div>
@@ -196,7 +196,7 @@
                 </div>
             </div>
             <div class="sm:w-1/2 sm:h-full bg-white flex justify-center items-center w-1/2">
-                <img class="py-14" src="img/logo-removebg.png" alt="">
+                <img class="py-14" src="img/logo_v2_bg.png" alt="">
             </div>
         </footer>
                        
@@ -211,7 +211,7 @@ function nav() {
     const body = document.body;
     const toggleNavBtn = document.getElementById("toggleNavBtn");
     const cross = document.getElementById("cross");
-    
+
     if (mobileNav) {
         const currentDisplay = window.getComputedStyle(mobileNav).display;
         if (currentDisplay === "none") {
@@ -228,8 +228,17 @@ function nav() {
     }
 }
 
-    </script>
+document.querySelectorAll('#res_nav ul li a').forEach(anchor => {
+    anchor.addEventListener('click', function () {
+        nav();
+    });
+});
+
     
 </body>
 
 </html>
+
+
+
+
