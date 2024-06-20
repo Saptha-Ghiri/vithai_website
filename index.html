@@ -44,6 +44,11 @@
             min-width: 100%;
             box-sizing: border-box;
         }
+        @media (min-width: 630px) {
+  .para {
+    display: hidden;
+  }
+}
     </style>
 </head>
 <body>
@@ -200,22 +205,39 @@
         <div class="bg-black h-0.5 mx-5"></div>
 
 
-        <div class="sm:p-5 text-black flex flex-col justify-center items-center">
+        <div class="sm:p-5 p-3 text-black flex flex-col justify-center items-center">
             <h1 id="service" class="text-5xl text-green-700">Services</h1>
-            <div class="flex p-4 space-x-3 w-3/4"><p class="sm:text-5xl text-2xl text-center flex justify-center items-center">Educational Guidance by industry experts</p><img class="sm:w-1/3 w-1/2 object-contain" src="img/educational-guidance.jpg" alt=""></div>
+            
+            <div class="flex sm:flex-row flex-col sm:justify-center sm:items-center p-4 space-x-3 w-3/4 ">
+                <p class="para sm:text-5xl text-2xl text-center justify-center items-center hidden sm:block">Educational Guidance by industry experts</p>
+                <img class="sm:w-1/3 object-contain" src="img/educational-guidance.jpg" alt="">
+                <p class="para sm:text-5xl text-2xl text-center justify-center items-center block sm:hidden">Educational Guidance by industry experts</p>
 
-            <div class="flex p-4 space-x-3 w-3/4"><img class="sm:w-1/3 w-1/2 object-contain" src="img/blood.avif" alt=""><p class="sm:text-5xl text-2xl text-center flex justify-center items-center">Blood donars arranged through communities</p></div>
+            </div>
+        
+            <div class="flex sm:flex-row flex-col sm:justify-center sm:items-center p-4 space-x-3 w-3/4">
+                <img class="sm:w-1/3 object-contain" src="img/blood.avif" alt="">
+                <p class="sm:text-5xl text-2xl text-center flex justify-center items-center">Blood donors arranged through communities</p>
+            </div>
+        
+            <div class="flex sm:flex-row flex-col sm:justify-center sm:items-center p-4 space-x-3 w-3/4">
+                <p class="para sm:text-5xl text-2xl text-center justify-center items-center hidden sm:block">Scribes for exams arranged with no cost</p>
+                <img class="sm:w-1/3 object-contain" src="img/image.avif" alt="">
+                <p class="para sm:text-5xl text-2xl text-center justify-center items-center block sm:hidden">Scribes for exams arranged with no cost</p>
 
-            <div class="flex p-4 space-x-3 w-3/4"><p class="sm:text-5xl text-2xl text-center flex justify-center items-center">Scribes for exams arranged with no cost</p><img class="sm:w-1/3 w-1/2 object-contain" src="img/image.avif" alt=""></div>
-
-            <div class="flex p-4 space-x-3 w-3/4"><img class="sm:w-1/3 w-1/2 object-contain" src="img/food donation.jpg" alt=""><p class="sm:text-5xl text-2xl text-center flex justify-center items-center">Food donations arranged at our supporting old age homes and orphanages</p></div>
-
+            </div>
+        
+            <div class="flex sm:flex-row flex-col sm:justify-center sm:items-center p-4 space-x-3 w-3/4">
+                <img class="sm:w-1/3 object-contain" src="img/food donation.jpg" alt="">
+                <p class="sm:text-5xl text-2xl text-center flex justify-center items-center">Food donations arranged at our supporting old age homes and orphanages</p>
+            </div>
         </div>
+        
         <div class="bg-black h-0.5 mx-5"></div>
 
 
-        <div class="sm:p-5 text-black flex flex-col justify-center items-center">
-            <h1 class="text-5xl text-green-700">Gallery</h1>
+        <div class="sm:p-5 p-3 text-black flex flex-col justify-center items-center">
+            <h1 id="gallery" class="text-5xl text-green-700">Gallery</h1>
             <div class="img_container mx-auto p-4">
                 <div class="slider">
                     <div class="slides sm:h-screen h-1/4">
